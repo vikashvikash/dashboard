@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import {userRegister} from '../../Redux/Actions/ActionCreators';
+import {userRegister} from '../../../Redux/Actions/ActionCreators';
 import styled from 'styled-components';
-import {Button} from '../../Shared/Button';
+import {Button} from '../../../Shared/Button';
 
 const Title = styled.h1`
   font-size: 1.2em;
@@ -28,8 +28,6 @@ const RegisterPage =()=>{
         setPassword(event.target.password.value);
         setSendata(true);
     
-       
-
        event.preventDefault();
         
     }

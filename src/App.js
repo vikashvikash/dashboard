@@ -1,8 +1,8 @@
 import './App.css';
-import  HomePage  from './Components/Pages/HomePage';
+import  HomePage  from './Components/Pages/HomePage/HomePage';
 import { BrowserRouter, Route } from 'react-router-dom';
-import  LoginPage  from './Components/Pages/LoginPage'
-import RegisterPage  from './Components/Pages/RegisterPage';
+import  LoginPage  from './Components/Pages/LoginPage/LoginPage'
+import RegisterPage  from './Components/Pages/RegisterPage/RegisterPage';
 import {Provider} from 'react-redux';
 import {configureStore} from './Redux/configureStore';
 import { Fragment } from 'react';

@@ -13,6 +13,13 @@
       "username": "Nagaraju",
       "password": "Nagaraju",
       "id": 1
+    },
+    {
+      "firstname": "Nagaraju",
+      "lastname": "Yadav",
+      "username": "Nagaraju",
+      "password": "Nagaraju",
+      "id": 2
     }
   ]
 }

@@ -1,13 +1,13 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
 import styled from 'styled-components';
-import {userLogin} from '../../Redux/Actions/ActionCreators';
+import {userLogin} from '../../../Redux/Actions/ActionCreators';
 import {useDispatch,useSelector,connect}from 'react-redux';
 import{useEffect, useState} from 'react';
-import{ Button} from '../../Shared/Button';
+import{ Button} from '../../../Shared/Button';
 
 
-const Title = styled.h1`
+const Title = styled.div`
   font-size: 1.1em;
   margin:100px 400px;
   background-color:	#7FFFD4;
@@ -20,7 +20,7 @@ const Title = styled.h1`
 
 const HomePage=()=> {
     const history=useHistory();
-    const dispatch=useDispatch();
+   const dispatch=useDispatch();
     const [username,setName]=useState("");
     const [password,setPass]=useState("");
     var loginStatus=useSelector(state=>state.isLogin);
@@ -55,13 +55,14 @@ useEffect(()=>{
     return(<Title>
         <form onSubmit={getDetails}>
           <label htmlFor="username" placeholder="User name" name="username">UserName</label>
-          <input type="text" id="username"name="username" onChange={setUsername} required></input>  
+          <input type="text" id="username"name="username" className="userName"  onChange={setUsername} required></input>  
           <label htmlFor="password" name="password">Password</label>
           <input type="password" id="password" name="password" onChange={setPassword} autoComplete="on" required></input>  
-          <Button type="submit" id="submit" >Login</Button >  <span>    </span> <Button type="button" onClick={registerPage}>Register</Button>
+          <Button type="submit" id="submit" className="Submit">Login</Button >  <span>    </span> <Button type="button" onClick={registerPage}>Register</Button>
         </form>
     </Title>);
 }
  
 
-export default connect(null,{userLogin})(HomePage);
+export default HomePage;
+

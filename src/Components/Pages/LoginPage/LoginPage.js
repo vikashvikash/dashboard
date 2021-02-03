@@ -1,9 +1,9 @@
 import React, { Fragment, useEffect } from 'react';
 import {useHistory } from 'react-router-dom';
 import{useSelector, useDispatch,connect} from 'react-redux';
-import{userLogout} from '../../Redux/Actions/ActionCreators';
+import{userLogout} from '../../../Redux/Actions/ActionCreators';
 import styled from 'styled-components';
-import{Button} from '../../Shared/Button';
+import{Button} from '../../../Shared/Button';
 
 
 
@@ -36,4 +36,4 @@ const Title = styled.h1`
     <Button type="button" onClick={Logout}>Logout</Button>
    </Title> </Fragment>);
 }
-export default connect(null,{userLogout})(LoginPage);
+export default LoginPage;
