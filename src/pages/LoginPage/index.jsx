@@ -1,9 +1,9 @@
 import React, { Fragment, useEffect } from 'react';
 import {useHistory } from 'react-router-dom';
 import{useSelector, useDispatch,connect} from 'react-redux';
-import{userLogout} from '../../../Redux/Actions/ActionCreators';
+import{userLogout} from '../../redux/actions/actionCreators';
 import styled from 'styled-components';
-import{Button} from '../../../Shared/Button';
+import{Button} from '../../components/Button';
 
 
 

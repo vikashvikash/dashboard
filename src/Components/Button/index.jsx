@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-export const Button = styled.button`
+
+export const Button=styled.button`
   color: tomato;
   font-size: 0.7em;
   margin:0.1em;

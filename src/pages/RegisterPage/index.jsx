@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import {userRegister} from '../../../Redux/Actions/ActionCreators';
+import {userRegister} from '../../redux/actions/actionCreators';
 import styled from 'styled-components';
-import {Button} from '../../../Shared/Button';
+import {Button} from '../../components/Button';
+import Input from '../../components/Input';
 
 const Title = styled.h1`
+  
   font-size: 1.2em;
   margin:100px 400px;
   background-color:springgreen;
@@ -51,13 +53,13 @@ const gotoHome=()=>{
     return(<Title>
         <form onSubmit={userEntry}>
             <label htmlFor="firstname">First Name</label>
-            <input id="firstname" placeholder="Firstname" type="text" name="firstname" required></input>
+            <Input id="firstname" placeholder="Firstname" type="text" name="firstname" required></Input>
             <label htmlFor="lastname">Last Name</label>
-            <input id="lasttname" placeholder="Lasttname" type="text" name="lastname" required></input>
+            <Input id="lasttname" placeholder="Lasttname" type="text" name="lastname" required></Input>
             <label htmlFor="username">User Name</label>
-            <input id="usertname" placeholder="Username" type="text" name="username" required></input>
+            <Input id="usertname" placeholder="Username" type="text" name="username" required></Input>
             <label htmlFor="password">Pass Word</label>
-            <input id="password" placeholder="password" type="password" name="password" autocomplete="on" required></input>
+            <Input id="password" placeholder="password" type="password" name="password" autocomplete="on" required></Input>
             <Button type="submit" className="Submit">Submit</Button>
             <Button type="button" className="Home" onClick={gotoHome}>Home</Button>
             

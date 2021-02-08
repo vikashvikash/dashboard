@@ -1,5 +1,5 @@
-import * as ActionTypes from '../ActionTypes';
-import {baseUrl} from '../../Shared/baseUrl';
+import * as ActionTypes from '../actionTypes';
+import {baseUrl} from '../../shared/baseUrl';
 import axios from 'axios';
 
 export const loginSuccess=()=>

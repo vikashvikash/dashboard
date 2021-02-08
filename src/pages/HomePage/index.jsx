@@ -1,19 +1,26 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
 import styled from 'styled-components';
-import {userLogin} from '../../../Redux/Actions/ActionCreators';
+import {userLogin} from '../../redux/actions/actionCreators';
 import {useDispatch,useSelector,connect}from 'react-redux';
 import{useEffect, useState} from 'react';
-import{ Button} from '../../../Shared/Button';
+import{ Button} from '../../components/Button';
+import Input from '../../components/Input';
 
 
-const Title = styled.div`
-  font-size: 1.1em;
-  margin:100px 400px;
-  background-color:	#7FFFD4;
-  padding:100px 200px;
-  color:black;
+ const Title = styled.div`
+    
+     font-size: 1.1em;
+     margin:100px 300px;
+     background-color:	#7FFFD4;
+     padding:100px 200px;
+     color:black;
+    
+   
+
 `;
+
+
 
 
 
@@ -55,9 +62,9 @@ useEffect(()=>{
     return(<Title>
         <form onSubmit={getDetails}>
           <label htmlFor="username" placeholder="User name" name="username">UserName</label>
-          <input type="text" id="username"name="username" className="userName"  onChange={setUsername} required></input>  
+          <Input type="text" id="username"name="username" className="userName"  onChange={setUsername} required></Input>  
           <label htmlFor="password" name="password">Password</label>
-          <input type="password" id="password" name="password" onChange={setPassword} autoComplete="on" required></input>  
+          <Input type="password" id="password" name="password" onChange={setPassword} autoComplete="on" required></Input>  
           <Button type="submit" id="submit" className="Submit">Login</Button >  <span>    </span> <Button type="button" onClick={registerPage}>Register</Button>
         </form>
     </Title>);

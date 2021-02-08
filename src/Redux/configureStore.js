@@ -1,5 +1,5 @@
 import {createStore ,applyMiddleware} from 'redux';
-import {userReducer} from './Reducers/userReducer';
+import {userReducer} from './reducers/rootReducer';
 import thunk from 'redux-thunk';
 
 export const configureStore=()=>{
